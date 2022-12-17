@@ -29,19 +29,19 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <p>
 <img src="https://imgur.com/0INwRXw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://imgur.com/UWUwljv.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/tc32g9Q.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Create two Vitrual Machines in Azure: Log into the Microsoft Azure Portal with your Microsoft Account --> search "resource groups" in the search bar --> create resource group --> search "Virtual Machines" in the search bar --> create two Virtual Machines (Windows 10 OS for VM1 & Ubuntu OS for VM2) --> Make sure both VMs are in the same "resource group". 
+Create two Vitrual Machines in Azure: Log into the Microsoft Azure Portal with your Microsoft Account --> search "resource groups" in the search bar --> create resource group --> search "Virtual Machines" in the search bar --> create two Virtual Machines (Windows 10 OS for VM1 & Ubuntu OS for VM2) --> Make sure both VMs are in the same "resource group". *When setting up the VMs remember the username and password that you use. You'll need this information later to remote desktop into the VMs. I recommend using the same login information for both Vms.
 </p>
 <br />
 
 <p>
 <img src="https://imgur.com/Dhd0N4w.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://imgur.com/jU0vkS6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/c8UPweu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Remote Desktop into each "Virtual Machine". Go to --> VM1 settings --> copy "public IP address" --> search "remote desktop connections" in start search bar --> Open "Remote Desktop Connection" & paste copied IP address from VM1 --> click connect --> Use the Username & Password created in step 1 to sign in to the VM. 
 </p>
 <br />
 
