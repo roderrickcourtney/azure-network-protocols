@@ -3,7 +3,7 @@
 </p>
 
 <h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
-In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. For this example we will be using two Virtual Machines created in an earlier lab. <br />
+In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups.<br />
 
 <h2>Environments and Technologies Used</h2>
 
@@ -24,6 +24,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Remote Desktop into VMs
 - Install & Run WireShark
 - Test Connectivity Between VMs
+- Alter Network Security Group Settings
 
 <h2>Actions and Observations</h2>
 
@@ -62,6 +63,15 @@ While into VM1, download WireShark. Search "WireShark" on google --> click Wires
 </p>
 <p>
 Go to VM2 on Azure Portal --> overview --> copy the "private IP address" --> Go to VM1 --> Search PowerShell in the start menu search bar & open it --> Type "ping" then paste VM2's private IP address into "PowerShell" (WireShark will now show the two VMs pinging back and forth). Pay attention to all of the data being communicated between both VMs on this step
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/5xWsHFk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/AgVXdZo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Go back to Azure Portal --> type "Network Security Group" in the search bar (this is the VMs firewall) --> select "VM2-NSG" --> "Inbound security rules" under settings --> click "+ add" --> in the new pop up window change "protocol" to "ICMP" --> change "action" to "deny" --> change "Name" to "Deny_ICMP_Ping" --> Click "add" at bottom. *Notice how the ping cmd in PowerShell on VM1 is immediately halted due to being blocked by VM2's firewall thanks to the new inbound security rule you made. If you edit the rule to allow traffic, notice how the perpetual ping cmds successfully resume.
 </p>
 <br />
 
